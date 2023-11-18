@@ -1,0 +1,138 @@
+package Introduction;
+
+public class PrimitiveDataTypes {
+
+	public static void main(String[] args) {
+		/*
+		  8 Primitive Data types:
+		  boolean
+		  byte
+		  char
+		  short
+		  int
+		  long
+		  float
+		  double
+		 */
+		/*
+		Data Type	Size	Description
+		----------------------------------------------------------
+		byte	1 byte	Stores whole numbers from -128 to 127 (1 byte = 8 bits so total=2^8=256 but range comes from (-2^7 to 2^7 - 1))
+		short	2 bytes	Stores whole numbers from -32,768 to 32,767 (2 bytes=16 bits so range (-2^15 to 2^15 - 1))
+		int	    4 bytes	Stores whole numbers from -2,147,483,648 to 2,147,483,647 (4 bytes = 32 bits so range (-2^31 to 2^31 - 1))
+		long	8 bytes	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 (8 bytes = 64 bits so range (-2^63 to 2^63 - 1))
+		float	4 bytes	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+		double	8 bytes	Stores fractional numbers. Sufficient for storing 15 decimal digits
+		boolean	1 bit	Stores true or false values
+		char	2 bytes	Stores a single character/letter or ASCII values
+		*/
+		/*
+		  int is a primitive data type and Integer is a wrapper class
+		  We have 8 wrapper classes for all 8 primitive data types they are used to perform more operations on data type values.
+
+		 */
+		int value = 10_0_00; //we can separate digits through giving underscore
+		int intMinValue = Integer.MIN_VALUE;
+		int intMaxValue = Integer.MAX_VALUE;
+		System.out.println("min int value: " + intMinValue);
+		System.out.println("max int value: " + intMaxValue);
+		//Overflow means the size is exceeded and trying to add more so trying reverse order.
+		System.out.println("Busted int max: " + (intMaxValue + 1)); //overflow 
+		//Under flow means the size is exceeded and trying to subtract more so trying reverse order
+		System.out.println("Busted int min: " + (intMinValue - 1)); //underflow
+		System.out.println(value);
+		//Byte
+		byte myMinByteValue = Byte.MIN_VALUE;
+		byte myMaxByteValue = Byte.MAX_VALUE;
+		System.out.println("min byte value: " + myMinByteValue);
+		System.out.println("max byte value: " + myMaxByteValue);
+
+		//short
+		short myMinShortValue = Short.MIN_VALUE;
+		short myMaxShortValue = Short.MAX_VALUE;
+		System.out.println("min Short value: " + myMinShortValue);
+		System.out.println("max Short value: " + myMaxShortValue);
+
+		//long
+		//we have to provide Capital L at the end of value to make unique otherwise it will be considered as integer
+		long longValue = 100L;
+		System.out.println(longValue);
+		long myMinLongValue = Long.MIN_VALUE;
+		long myMaxLongValue = Long.MAX_VALUE;
+		System.out.println("min Long value: " + myMinLongValue);
+		System.out.println("max Long value: " + myMaxLongValue);
+
+		//Casting in java
+		//Casting means to convert a number from one type to another.
+		int total = (intMaxValue / 2);
+		System.out.println(total);
+
+		//byte byteTotal = (myMaxByteValue / 2);  This will throw error because we expect byte, but it returns int value, so we need to cast to byte
+		byte byteTotal = (byte) (myMaxByteValue / 2);
+		System.out.println(byteTotal);
+		short shortTotal = (short) (myMaxShortValue / 2);
+		System.out.println(shortTotal);
+
+		//Primitive Data types Challenge 1
+		byte b = 120;
+		short s = 1000;
+		int i = 10000;
+		long l = 50000L + 1000L * (b + s+ i);
+		System.out.println("long value: " + l);
+
+		float myMinFloatValue = Float.MIN_VALUE;
+		float myMaxFloatValue = Float.MAX_VALUE;
+		System.out.println("min Float value: " + myMinFloatValue);
+		System.out.println("max Float value: " + myMaxFloatValue);
+
+		double myMinDoubleValue = Double.MIN_VALUE;
+		double myMaxDoubleValue = Double.MAX_VALUE;
+		System.out.println("min Double value: " + myMinDoubleValue);
+		System.out.println("max Double value: " + myMaxDoubleValue);
+
+		int intValue = 5;
+		//float floatValue = 5.46f; we have to mention f at the end for decimals otherwise they will be considered as double type.
+		float floatValue = (float) 5.46;
+		double doubleValue = 5.46; //by default decimals will be considered as double values so no need to specify d at the end of value.
+		System.out.println(intValue + " float value: " + floatValue + " double value: " + doubleValue);
+
+		int divideint = 5 / 3;
+		float dividefloat = 5f / 3f;
+		double dividedouble = 5d / 3d;
+		/*
+		Output:
+		----------------
+		1
+		1.6666666
+		1.6666666666666667
+		 */
+		System.out.println(divideint);
+		System.out.println(dividefloat);
+		System.out.println(dividedouble); //Double value is much precised value
+
+		//Primitive Data types Challenge 2
+		int pounds = 10;
+		double kms = 10 * 0.45359237;
+		System.out.println("ponds to kms: " + kms);
+
+		//char 2 bytes
+		char c = 'D';
+		//Unicode is a computing industry standard designed to consistently and uniquely encode characters used in written languages throughout the world.
+		//The Unicode standard uses hexadecimal to express a character. For example, the value 0x0041 represents the Latin character A.
+		char myUnicode = '\u0044'; //This is unicode value for D. We can see all unicodes in "unicode-table.com" website.
+		System.out.println("char: " + c);
+		System.out.println("myUnicode: " + myUnicode);
+		char myCopyRigghtchar = '\u00A9'; //\u to define unicodes.
+		System.out.println(myCopyRigghtchar);
+
+
+
+
+
+
+
+
+
+	}
+
+}

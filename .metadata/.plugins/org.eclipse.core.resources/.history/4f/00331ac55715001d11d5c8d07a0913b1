@@ -1,0 +1,57 @@
+package Introduction;
+
+public class KeyWords_Expressions_Statements_Methods {
+
+    public static void main(String[] args) {
+        //Keywords are the reserved words, and they marked in blue colour, and we can not use them.
+		/*
+		Expression contains variable, values, operators
+		In side double quotes will be expression
+		 */
+        int value = 50; //value is variable, = is assignment operator, 50 is value, so it is called as expression
+        //if we include datatype and semicolon also then it will become statement.
+        if (value == 50)  //inside if block also called expression as "value == 50" has all expression needs.
+        {
+            System.out.println("This is expression"); //Inside double quotes also called expression
+        }
+
+        System.out.println("\t This is\n" +
+                "\t also a\t\n" +
+                "\t statement\t"); //statement can be in any number of lines.
+
+        //indentation is the spaces that is going to help you to understand logical flow of the code.
+
+        //If then else control statements
+        int score = 4000;
+        if (score < 5000 && score > 1000) {
+            System.out.println("Score is less than 5000 and greater than 1000");
+        } else if(score < 1000) {
+            System.out.println("Score is less than 1000");
+        } else {
+            System.out.println("got here");
+        }
+
+        //challenge
+        boolean gameOver = true;
+        int scoreValue = 800;
+        int levelCompleted = 5;
+        int bonus = 100;
+        if (gameOver) {
+            int finalScoreValue = scoreValue + (levelCompleted * bonus);
+            //finalScoreValue is local variable and we cn not use local variables out-side of the block as java will remove them once block closes.
+            //This is called scope of the variable.
+            System.out.println("finalScoreValue: " + finalScoreValue);
+        }
+
+        scoreValue = 10000; //we can update values of variables.
+        levelCompleted = 8;
+        bonus = 200;
+        if (gameOver) {
+            int finalScoreValue = scoreValue + (levelCompleted * bonus); //As finalScoreValue is removed so we can create with same name.
+            System.out.println("finalScoreValue: " + finalScoreValue);
+        }
+
+
+    }
+
+}

@@ -1,0 +1,78 @@
+package Introduction;
+
+public class Operators {
+    public static void main(String[] args) {
+        //Operators: Operators are special symbols that used to perform operation on operands.
+        //Operand is a term used to describe any object that is manipulated by operator.
+        int value = 15 + 20;
+        //= is the assignment operator, and it will assign right of this to left side variable.
+        //Here + is the operator. 15, 20 are operands.
+
+        //Expression: Expression is formed by combining vaiables, literals, method retun values, operators
+        //15 + 20 is called as expression.
+
+        //abbreviations
+        int result = 1;
+        result++;
+        System.out.println("1 + 1 = " + result);
+        result--;
+        System.out.println("2 - 1 = " + result);
+        result = result + 2;
+        System.out.println(result);
+        result += 5;
+        System.out.println(result);
+        result *= 10;
+        System.out.println("8 * 10 = " + result);
+        result /= 8;
+        System.out.println("80 / 8 = " + result);
+        result -= 2;
+        System.out.println("10 - 2 = " + result);
+        boolean isTrue = result == 8 ? true : false; //Ternary operator. It is a shortcut of if-then-else statement.
+        System.out.println(isTrue);
+        int age = 20;
+        boolean isEligibleForVoting = (age >= 18) ? true : false;
+        System.out.println("Eligible for voting: " + isEligibleForVoting);
+        if(result != 10) {
+            System.out.println("value is incorrect");
+        }
+
+        int topScore = 80;
+        int secondTopScore = 60;
+        if (topScore > secondTopScore && topScore < 100) //Logical and operator
+        {
+            System.out.println("And Operator");
+        }
+        if ((topScore < secondTopScore) || (secondTopScore == 60)) //Logical Or operator
+        {
+            System.out.println("Or Operator");
+        }
+        //& bitwise and operator and used to use in bit level
+        //| bitwise or operator and used to use in bit level
+
+        boolean isvalue = false;
+        if(!isvalue)  //! of false is equal to true so finally true, so entered into if block. //! is called "Logical complement operator".
+        {
+            System.out.println("Entered into if block");
+        }
+
+        //Operators challenge 1
+        double d1 = 20.00;
+        double d2 = 80.00;
+        double d3 = (d1 + d2) * 100.00;
+        System.out.println("d3: " + d3);
+        double remainder = d3 % 40.00;
+        System.out.println("remainder: " + remainder);
+        boolean getRemainder = (remainder == 0) ? true : false;
+        System.out.println("getRemainder: " + getRemainder);
+        if (!getRemainder)
+        {
+            System.out.println("Got some remainder");
+        }
+
+
+
+
+
+    }
+
+}

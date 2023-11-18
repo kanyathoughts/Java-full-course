@@ -1,0 +1,60 @@
+package Introduction;
+
+public class Operators {
+    public static void main(String[] args) {
+        //Operators: Operators are special symbols that used to perform operation on operands.
+        //Operand is a term used to describe any object that is manipulated by operator.
+        int value = 15 + 20;
+        //= is the assignment operator, and it will assign right of this to left side variable.
+        //Here + is the operator. 15, 20 are operands.
+
+        //Expression: Expression is formed by combining vaiables, literals, method retun values, operators
+        //15 + 20 is called as expression.
+
+        //abbreviations
+        int result = 1;
+        result++;
+        System.out.println("1 + 1 = " + result);
+        result--;
+        System.out.println("2 - 1 = " + result);
+        result = result + 2;
+        System.out.println(result);
+        result += 5;
+        System.out.println(result);
+        result *= 10;
+        System.out.println("8 * 10 = " + result);
+        result /= 8;
+        System.out.println("80 / 8 = " + result);
+        result -= 2;
+        System.out.println("10 - 2 = " + result);
+        boolean isTrue = result == 8 ? true : false; //Ternary operator. If condition we can write it in single line.
+        System.out.println(isTrue);
+        if(result != 10) {
+            System.out.println("value is incorrect");
+        }
+
+        int topScore = 80;
+        int secondTopScore = 60;
+        if (topScore > secondTopScore && topScore < 100) //Logical and operator
+        {
+            System.out.println("And Operator");
+        }
+        if ((topScore < secondTopScore) || (secondTopScore == 60)) //Logical Or operator
+        {
+            System.out.println("Or Operator");
+        }
+        //& bitwise and operator and used to use in bit level
+        //| bitwise or operator and used to use in bit level
+
+        boolean isvalue = false;
+        if(!isvalue)  //! of false is equal to true so finally true so entered into if block.
+        {
+            System.out.println("Entered into if block");
+        }
+
+
+
+
+    }
+
+}
